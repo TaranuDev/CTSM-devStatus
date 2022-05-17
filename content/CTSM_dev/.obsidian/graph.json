@@ -1,0 +1,72 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag: #CTSM #Main",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag: #CMEPS",
+      "color": {
+        "a": 1,
+        "rgb": 11601579
+      }
+    },
+    {
+      "query": "tag: #CPL7",
+      "color": {
+        "a": 1,
+        "rgb": 15902210
+      }
+    },
+    {
+      "query": "tag: #MOSART #Routing",
+      "color": {
+        "a": 1,
+        "rgb": 553498
+      }
+    },
+    {
+      "query": "tag: #CTSM #Biogeophys",
+      "color": {
+        "a": 1,
+        "rgb": 5526240
+      }
+    },
+    {
+      "query": "tag: #CTSM #Surfdata",
+      "color": {
+        "a": 1,
+        "rgb": 0
+      }
+    },
+    {
+      "query": "tag: #MOSART #Coupler",
+      "color": {
+        "a": 1,
+        "rgb": 16756224
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0.4,
+  "nodeSizeMultiplier": 1.38153846153846,
+  "lineSizeMultiplier": 1.78358974358974,
+  "collapse-forces": false,
+  "centerStrength": 0.694774346793349,
+  "repelStrength": 11.0451306413302,
+  "linkStrength": 1,
+  "linkDistance": 30,
+  "scale": 0.42967809143425456,
+  "close": true
+}
