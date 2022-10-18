@@ -9,7 +9,7 @@ The objective of this model development is to extend CTSM functionality to suppo
 
 The supported sectors are: domestic, livestock, thermoelectric, manufacturing and mining.
 
-Instead of deriving the sectoral demand and consumption from predictors, we will rely instead on available [datasets](Documentation/Input_Data.md). But the development will be done in such a way, that it will be relatively simple to build on it in the future by adding new functionalities (e.g. demand based on predictors).
+Instead of deriving the sectoral demand and consumption from predictors, we will rely instead on available [datasets](obsidian/Input_Data.md). But the development will be done in such a way, that it will be relatively simple to build on it in the future by adding new functionalities (e.g. demand based on predictors).
 
 The main features of this development are:
 1. Daily withdrawal and consumption fluxes are computed using the input data. `land component`
@@ -22,10 +22,10 @@ The main features of this development are:
 Following this approach we assure conservation of water, and at the same time account for the sectoral water usage impact on surface energy budget over land since consumption is directly applied to the soil surface.
 
 ### The development include changes to the following model components:
-- [Changes Tracker CTSM](Documentation/CTSM/Changes_Tracker_CTSM.md)
-- [Changes Tracker CMEPS](Documentation/CMEPS/Changes_Tracker_CMEPS.md)
-- [Changes Tracker CPL7](Documentation/CPL7/Changes_Tracker_CPL7.md)
-- [Changes Tracker MOSART](Documentation/MOSART/Changes_Tracker_MOSART.md)
+- [Changes Tracker CTSM](obsidian/CTSM/Changes_Tracker_CTSM.md)
+- [Changes Tracker CMEPS](obsidian/CMEPS/Changes_Tracker_CMEPS.md)
+- [Changes Tracker CPL7](obsidian/CPL7/Changes_Tracker_CPL7.md)
+- [Changes Tracker MOSART](obsidian/MOSART/Changes_Tracker_MOSART.md)
 
 
 
