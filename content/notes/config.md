@@ -12,7 +12,7 @@ The majority of configuration can be found under `data/config.yaml`. An annotate
 
 ```yaml {title="data/config.yaml"}
 # The name to display in the footer
-name: Jacky Zhao
+name: Ioan Sabin Taranu
 
 # whether to globally show the table of contents on each page
 # this can be turned off on a per-page basis by adding this to the
@@ -70,14 +70,14 @@ description:
 
 # title of the home page (also for SEO)
 page_title:
-  "🪴 Quartz 3.3"
+  "Human Water Interface in CTSM"
 
 # links to show in the footer
 links:
   - link_name: Twitter
-    link: https://twitter.com/_jzhao
+    link: https://twitter.com/SabinTaranu
   - link_name: Github
-    link: https://github.com/jackyzha0
+    link: https://github.com/TaranuDev
 ```
 
 ### Code Block Titles
