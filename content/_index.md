@@ -10,7 +10,7 @@ This is a documentation which tries to capture the progress done in the implemen
 
 This documentation is a work in progress, as the project is still not finished. Therefore the content is subject to change as we will advance with the source code development, testing and validation.
 
-You can start reading the documentation from the [Model Development for Sectoral Water Usage](Documentation/Model_Development_for_Sectoral_Water_Usage.md) file, which will guide you through the development process.
+You can start reading the documentation from the [Model Development for Sectoral Water Usage](obsidian/Model_Development_for_Sectoral_Water_Usage.md) file, which will guide you through the development process.
 
 Best regards,\
 Sabin Taranu
