@@ -22,23 +22,18 @@ By accounting for human water usage patterns in an Earth system model, it will b
 (4)   Understand how long term water management strategies may improve resilience against hydrological droughts and hot extremes.
 
 ## Represented processes:
-A schematic depiction of the implementation of sectoral water abstractions in the Community Earth System Model. The water withdrawals and consumption fluxes are computed daily in the land component of the model, CTSM. The water necessary to satisfy the demand is provided from the river network (achieved through coupling with the MOSART routing model). Basic sectoral priority is implemented, with water supplied by order of priority from domestic to irrigation. Part of the used water is recycled and sent back to the river model, and the other part is considered lost and disposed on surface soil where it evaporates or infiltrate into the ground.
+Figure 1 shows a schematic depiction of the implementation of sectoral water abstractions in the Community Earth System Model. While irrigation and other sectors are represented together, it should be mentioned that irrigation was already implemented in CESM since 2013. You can read more about this in the dedicated page [Irrigation in CTSM](./Irrigation/irrig2013). Nonetheless, in our current implementation, all sectors become connected through the competition for limited water resources provided by the river network.
+
+The water withdrawals and consumption fluxes are computed daily in the land component of the model, CTSM. 
+
+For irrigation, the demand is computed based on soil moisture deficit at the beginning of each day. The water is then supplied from the gridcell river network and applied on surface soil (or differently depending on the used irrigation technique) where it can supply plants with water, but also influence surface water/energy balance. 
+
+For other sectors, instead of deriving the sectoral demand and consumption from predictors (usually based on GDP and population), we rely instead on available [datasets](https://taranudev.github.io/obsidian/Input_Data/). The water necessary to satisfy the demand is then again provided from the river network (achieved through coupling with the MOSART routing model). Part of the used water is recycled and sent back to the river model, and the other part is considered inefficiently managed and disposed on surface soil over areas with natural vegetation where it contribute to the water/energy surface balance through evaporation, infiltration and runoff.
+
+Finally, a basic sectoral priority algorithm is implemented, with water supplied by order of priority from domestic to irrigation. This way, in situations when water is scarce, sectors will compete for limited resources. The current algorithm may be improved in the future, to allow different strategies of water management under limited resource availability.
 
 ![model_features](Figures/model_features.PNG)
 
-
-
-
-
-The main features of this development are:
-1. Daily withdrawal and consumption fluxes are computed using the input data. `land component`
-2. Withdrawal is satisfied from both surface (river water) and groundwater sources (unconfined gw). The withdrawal from groundwater is done only if there is no sufficient water in river storage. `land component`
-3. The consumed water is applied on surface soil over natural vegetation (and potentially pervious roads). `land component`
-4. The withdrawal and return flow fluxes are transferred to the routing component (MOSART). `coupler`
-5. The return flow is computed as the difference between actual withdrawal and consumption. `routing`
-6. The updated river volume is sent back to the land model (at the coupling frequency). `coupler`
-
-	Following this approach we assure conservation of water, and at the same time account for the sectoral water usage impact on surface energy budget over land since consumption is directly applied to the soil surface.
 
 ## Source code development:
 - [Changes Tracker CTSM](./CTSM/Changes_Tracker_CTSM.md)
