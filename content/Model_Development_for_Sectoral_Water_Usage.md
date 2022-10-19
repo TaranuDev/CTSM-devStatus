@@ -31,8 +31,19 @@ For other sectors, instead of deriving the sectoral demand and consumption from 
 Finally, a basic sectoral priority algorithm is implemented, with water supplied by order of priority from domestic to irrigation. This way, in situations when water is scarce, sectors will compete for limited resources. The current algorithm may be improved in the future, to allow different strategies of water management under limited resource availability.
 
 ![Figure 1: Infographic showcasing the representation of human water use in CESM.](Figures/model_features.PNG)
+**Figure 1:** A schematic depiction of the human water abstractions in Community Earth System Model (CESM)
 
-
+## Validation:
+- [Validate withdrawal, consumption and return flow fluxes consistency with input data]()
+- [Validate the conservation of quantities in the process of coupling of the land and routing components]()
+- [Validate river water usage limitation algorithm]()
+- [Validate sectoral competition algorithm]()
+- [Validate conservation of water in the system at local and global scale]()
+## Results:
+- [List of all outputs and some example results]()
+- [Expected vs Actual withdrawal - a precise way to measure water scarcity]()
+- [What happens to the consumption flow?]()
+- [Sectoral competition driven by water scarcity]()
 
 ## Source code development:
 - [Changes Tracker CTSM](CTSM/Changes_Tracker_CTSM.md)
