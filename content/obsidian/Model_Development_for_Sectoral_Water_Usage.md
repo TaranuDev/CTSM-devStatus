@@ -4,7 +4,7 @@ tags:
 enableToc: false # do not show a table of contents on this page
 ---
 
-## General description:
+## General discussion:
 Describing human-water interactions is one of the grand challenges in Earth system modelling. Despite previous initiatives (GEWEX, 2012), limited progress was made in this direction.
 
 The main objective of our project is to reduce this gap, by enhancing the Community Earth System Model to support all major water use sectors, including domestic, livestock, thermoelectric, manufacturing, mining and irrigation.
@@ -26,11 +26,11 @@ The water withdrawals and consumption fluxes are computed daily in the land comp
 
 For irrigation, the demand is computed based on soil moisture deficit at the beginning of each day. The water is then supplied from the gridcell river network and applied on surface soil (or differently depending on the used irrigation technique) where it can supply plants with water, but also influence surface water/energy balance. 
 
-For other sectors, instead of deriving the sectoral demand and consumption from predictors (usually based on GDP and population), we rely instead on available [datasets](./Input_Data.md). The water necessary to satisfy the demand is then again provided from the river network (achieved through coupling with the MOSART routing model). Part of the used water is recycled and sent back to the river model, and the other part is considered inefficiently managed and disposed on surface soil over areas with natural vegetation where it contribute to the water/energy surface balance through evaporation, infiltration and runoff.
+For other sectors, instead of deriving the sectoral demand and consumption from predictors (usually based on GDP and population), we prefer to rely on existing [datasets](./Input_Data.md). The water necessary to satisfy the demand is then again provided from the river network (achieved through coupling with the MOSART routing model). Part of the used water is recycled and sent back to the river model, and the other part is considered inefficiently managed and disposed on surface soil over areas with natural vegetation where it contribute to the water/energy surface balance through evaporation, infiltration and runoff.
 
 Finally, a basic sectoral priority algorithm is implemented, with water supplied by order of priority from domestic to irrigation. This way, in situations when water is scarce, sectors will compete for limited resources. The current algorithm may be improved in the future, to allow different strategies of water management under limited resource availability.
 
-![model_features](Figures/model_features.PNG)
+![model_features](./Figures/model_features.PNG)
 
 
 ## Source code development:
