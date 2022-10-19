@@ -11,7 +11,7 @@ It may contain contain an overview of the previous development and existing feat
 
 This documentation is a work in progress, as the project is still not finished. Therefore the content is subject to change as we will advance with the source code development, testing and validation.
 
-You can start reading the documentation from the [Model Development](/Model_Development_for_Sectoral_Water_Usage.md), which will guide you through the development process.
+You can start reading the documentation from the [Model Development](Model_Development_for_Sectoral_Water_Usage.md), which will guide you through the development process.
 
 Best regards,\
 Sabin Taranu
