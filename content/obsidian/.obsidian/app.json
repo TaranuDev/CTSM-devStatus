@@ -1,6 +1,6 @@
 {
   "newLinkFormat": "absolute",
   "alwaysUpdateLinks": true,
-  "useMarkdownLinks": false,
+  "useMarkdownLinks": true,
   "spellcheck": true
 }
