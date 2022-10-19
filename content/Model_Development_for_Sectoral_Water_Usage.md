@@ -20,7 +20,7 @@ By accounting for human water usage patterns in an Earth system model, it will b
 (4)   Understand how long term water management strategies may improve resilience against hydrological droughts and hot extremes.
 
 ## Represented processes:
-Figure 1 shows a schematic depiction of the implementation of sectoral water abstractions in the Community Earth System Model. While irrigation and other sectors are represented together, it should be mentioned that irrigation was already implemented in CESM since 2013. You can read more about this in the dedicated page [Irrigation in CTSM](Irrigation/irrig2013). Nonetheless, in our current implementation, all sectors become connected through the competition for limited water resources provided by the river network.
+Figure 1 shows a schematic depiction of the implementation of sectoral water abstractions in the Community Earth System Model. While irrigation and other sectors are represented together, it should be mentioned that irrigation was already implemented in CESM since 2013. You can read more about this in the dedicated page [Irrigation in CTSM](Irrigation/irrig2013.md). Nonetheless, in our current implementation, all sectors become connected through the competition for limited water resources provided by the river network.
 
 The water withdrawals and consumption fluxes are computed daily in the land component of the model, *CTSM*. 
 
@@ -34,16 +34,19 @@ Finally, a basic sectoral priority algorithm is implemented, with water supplied
 **Figure 1:** A schematic depiction of the human water abstractions in Community Earth System Model (CESM)
 
 ## Validation:
-- [Validate withdrawal, consumption and return flow fluxes consistency with input data]()
-- [Validate the conservation of quantities in the process of coupling of the land and routing components]()
-- [Validate river water usage limitation algorithm]()
-- [Validate sectoral competition algorithm]()
-- [Validate conservation of water in the system at local and global scale]()
+- [Validate withdrawal, consumption and return flow fluxes consistency with input data](Validation/consistency_with_input.md)
+- [Validate the conservation of quantities in the process of coupling of the land and routing components](Validation/conservation_during_coupling.md)
+- [Validate river water usage limitation algorithm](Validation/river_water_limit_algorithm.md)
+- [Validate sectoral competition algorithm](Validation/sectoral_competition_algorithm.md)
+- [Validate conservation of water in the system at local and global scale](Validation/water_conservation.md)
+
+
 ## Results:
-- [List of all outputs and some example results]()
-- [Expected vs Actual withdrawal - a precise way to measure water scarcity]()
-- [What happens to the consumption flow?]()
-- [Sectoral competition driven by water scarcity]()
+- [List of all outputs and some example results](Results/outputs_and_examples.md)
+- [Expected vs Actual withdrawal - a precise way to measure water scarcity](Results/expected_vs_actual.md)
+- [What happens to the consumption flow?](Results/consumption_flow.md)
+- [Sectoral competition driven by water scarcity](Results/sectoral_competition.md)
+
 
 ## Source code development:
 - [Changes Tracker CTSM](CTSM/Changes_Tracker_CTSM.md)
