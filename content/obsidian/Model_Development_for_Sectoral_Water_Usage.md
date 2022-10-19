@@ -30,7 +30,7 @@ For other sectors, instead of deriving the sectoral demand and consumption from 
 
 Finally, a basic sectoral priority algorithm is implemented, with water supplied by order of priority from domestic to irrigation. This way, in situations when water is scarce, sectors will compete for limited resources. The current algorithm may be improved in the future, to allow different strategies of water management under limited resource availability.
 
-![[./Figures/model_features.PNG]]
+![Infographic](/content/obsidian/Figures/model_features.PNG)
 
 
 ## Source code development:
