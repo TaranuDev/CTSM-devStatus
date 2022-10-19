@@ -26,4 +26,4 @@ links:
     link: https://github.com/TaranuDev
 
 favicon:
-  - { rel: "shortcut icon", href: "favicon-32x32.png", type: "image/png" }
+  - { rel: "shortcut icon", href: "favicon_website.png", type: "image/png" }
