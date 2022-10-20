@@ -12,7 +12,7 @@ Changes are done directly to the master branch (look for last tag with `sectorwa
 
 
 ### List of modifications:
-- [CMEPS/mediator/med_phases_prep_rof_mod.F90](Documentation/CMEPS/med_phases_prep_rof_mod.md)
-- [CMEPS/mediator/fd_cesm.yaml](Documentation/CMEPS/fd_cesm.md)
-- [CMEPS/mediator/esmFldsExchange_cesm_mod.F90](Documentation/CMEPS/esmFldsExchange_cesm_mod.md)
-- [CMEPS/mediator/med_diag_mod.F90](Documentation/CMEPS/med_diag_mod.md)
+- [CMEPS/mediator/med_phases_prep_rof_mod.F90](CMEPS/med_phases_prep_rof_mod.md)
+- [CMEPS/mediator/fd_cesm.yaml](CMEPS/fd_cesm.md)
+- [CMEPS/mediator/esmFldsExchange_cesm_mod.F90](CMEPS/esmFldsExchange_cesm_mod.md)
+- [CMEPS/mediator/med_diag_mod.F90](CMEPS/med_diag_mod.md)

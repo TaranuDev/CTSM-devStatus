@@ -12,29 +12,29 @@ The GitHub fork can be accessed [here](https://github.com/TaranuDev/CTSM)
 
 ## List of modifications:
 ### Namelist modifications
-- [CTSM/bld/namelist_files/namelist_definition_ctsm.xml](Documentation/CTSM/namelist_definition_ctsm.md)
-- [CTSM/bld/namelist_files/namelist_defaults_ctsm_tools.xml](Documentation/CTSM/namelist_defaults_ctsm_tools.md)
-- [CTSM/bld/namelist_files/namelist_defaults_ctsm.xml](Documentation/CTSM/namelist_defaults_ctsm.md)
-- [CTSM/bld/CLMBuildNamelist.pm](Documentation/CTSM/CLMBuildNamelist.md)
+- [CTSM/bld/namelist_files/namelist_definition_ctsm.xml](CTSM/namelist_definition_ctsm.md)
+- [CTSM/bld/namelist_files/namelist_defaults_ctsm_tools.xml](CTSM/namelist_defaults_ctsm_tools.md)
+- [CTSM/bld/namelist_files/namelist_defaults_ctsm.xml](CTSM/namelist_defaults_ctsm.md)
+- [CTSM/bld/CLMBuildNamelist.pm](CTSM/CLMBuildNamelist.md)
 
 ### Connect all forks using corresponding repositories and tags
-- [Externals.cfg](Documentation/CTSM/Externals.md)
+- [Externals.cfg](CTSM/Externals.md)
 
 ### Changes to the main
-- [CTSM/src/main/clm_driver.F90](Documentation/CTSM/clm_driver.md)
-- [CTSM/src/main/restFileMod.F90](Documentation/CTSM/restFileMod.md)
-- [CTSM/src/main/controlMod.F90](Documentation/CTSM/controlMod.md)
-- [CTSM/src/main/clm_varpar.F90](Documentation/CTSM/clm_varpar.md)
-- [CTSM/src/main/clm_instMod.F90](Documentation/CTSM/clm_instMod.md)
-- [CTSM/src/main/clm_varctl.F90](Documentation/CTSM/clm_varctl.md)
+- [CTSM/src/main/clm_driver.F90](CTSM/clm_driver.md)
+- [CTSM/src/main/restFileMod.F90](CTSM/restFileMod.md)
+- [CTSM/src/main/controlMod.F90](CTSM/controlMod.md)
+- [CTSM/src/main/clm_varpar.F90](CTSM/clm_varpar.md)
+- [CTSM/src/main/clm_instMod.F90](CTSM/clm_instMod.md)
+- [CTSM/src/main/clm_varctl.F90](CTSM/clm_varctl.md)
 
 ### Changes to biogeophys
-- [CTSM/src/biogeophys/SectorWaterMod.F90](Documentation/CTSM/SectorWaterMod.md) `new module`
-- [CTSM/src/biogeophys/HydrologyNoDrainageMod.F90](Documentation/CTSM/HydrologyNoDrainageMod.md)
-- [CTSM/src/biogeophys/BalanceCheckMod.F90](Documentation/CTSM/BalanceCheckMod.md)
-- [CTSM/src/biogeophys/Waterlnd2atmType.F90](Documentation/CTSM/Waterlnd2atmType.F90)
+- [CTSM/src/biogeophys/SectorWaterMod.F90](CTSM/SectorWaterMod.md) `new module`
+- [CTSM/src/biogeophys/HydrologyNoDrainageMod.F90](CTSM/HydrologyNoDrainageMod.md)
+- [CTSM/src/biogeophys/BalanceCheckMod.F90](CTSM/BalanceCheckMod.md)
+- [CTSM/src/biogeophys/Waterlnd2atmType.F90](CTSM/Waterlnd2atmType.F90)
 
-
+%%
 ### Changes to tools
 Here we don't go in much details. All changes to the tool are done following the instructions. And at the moment, what this does is to add to the surface data new fields corresponding to the sectoral water usage (withdrawal and consumption for each sector).
 
