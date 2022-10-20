@@ -70,7 +70,7 @@ description:
 
 # title of the home page (also for SEO)
 page_title:
-  "Human Water Interface in CTSM"
+  "Human water interface in CESM"
 
 # links to show in the footer
 links:
