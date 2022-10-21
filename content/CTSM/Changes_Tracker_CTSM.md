@@ -34,7 +34,7 @@ The GitHub fork can be accessed [here](https://github.com/TaranuDev/CTSM)
 - [CTSM/src/biogeophys/BalanceCheckMod.F90](CTSM/BalanceCheckMod.md)
 - [CTSM/src/biogeophys/Waterlnd2atmType.F90](CTSM/Waterlnd2atmType.F90)
 
-%%
+
 ### Changes to tools
 Here we don't go in much details. All changes to the tool are done following the instructions. And at the moment, what this does is to add to the surface data new fields corresponding to the sectoral water usage (withdrawal and consumption for each sector).
 
