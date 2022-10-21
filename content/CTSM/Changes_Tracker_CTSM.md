@@ -4,7 +4,7 @@ tags:
 enableToc: false # do not show a table of contents on this page
 ---
 
-## Here we track all modifications done to the MOSART in order to support sectoral water usage
+## Here we track all modifications done to the land component CTSM/CLM in order to support sectoral water usage
 
 The GitHub fork can be accessed [here](https://github.com/TaranuDev/CTSM)
 
