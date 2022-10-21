@@ -6,7 +6,7 @@ tags:
 enableToc: false # do not show a table of contents on this page
 ---
 
-## Overview:
-This script builds the namelists for CLM.
+## General discussion:
+This script builds the namelists for land component of the CESM model (CTSM/CLM5).
 
-To support sectoral water usage we added two new subroutines: `setup_logic_sectorwater()` and `setup_logic_sectorwater_parameters`.
+To support sectoral water usage we added two new subroutines: `setup_logic_sectorwater()` and `setup_logic_sectorwater_parameters()`.
