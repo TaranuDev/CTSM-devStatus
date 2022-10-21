@@ -14,36 +14,33 @@ We will not go in detail over the entire code, but the reader is invited to do s
 	1. When it comes to the hydrology part in the driver loop, it is important to ask ourselves when the human water abstractions should happen? The way I see it at the moment, is that sectoral water usage should be seen as a forcing, similar to precipitation, and therefore should be "done or requested" before solving for any emerging hydrological process, as canopy interception or snow formation.
 	2. As mentioned before in [Model Development](Model_Development_for_Sectoral_Water_Usage.md), at the moment when we started working on sectoral water abstractions, irrigation was already implemented (since 2013 in fact). At the moment we also do not plan to change the irrigation module. Therefore, if we want the sectoral competition algorithm to work properly, we had to call the subroutine related to sectoral abstractions just before the irrigation one, since in our current implimentation, irrigation is supposed to be last in priority.
 
+## What changed:
 
-In the case of sectoral water usage, we will have only one call to the subroutine: `CalcAndWithdrawSectorWaterFluxes()` which is defined in the [CTSM/src/biogeophys/HydrologyNoDrainageMod.F90](Documentation/CTSM/HydrologyNoDrainageMod.md) module. 
+To run sectoral water usage in the driver sequence, we make a single call to the subroutine: `CalcAndWithdrawSectorWaterFluxes()` which is defined in the [CTSM/src/biogeophys/HydrologyNoDrainageMod.F90](CTSM/HydrologyNoDrainageMod.md) module. 
 
-This subroutine do everything required for sectoral water usage implementation: 
-- compute the withdrawal and consumption for the day (monthly value from input data devided by number of days in a month);
+This subroutine do everything required for sectoral water usage functioning from land model perspective: 
+- compute the withdrawal and consumption for the day (based on monthly values from input data assuming uniform distribution across the days);
 - compute actual withdrawal and consumption by accounting for available river water;
 - compute actual return flow (actual withdrawal - actual consumption);
-- update the water instance object which contains the fields (actual withdrawal and return flow) to be send through the coupler so it gets to the river model
+- update the water instance object which contains the fields (actual withdrawal and return flow) which is accessed then by the river model MOSART through the coupler and mediator;
+- apply the consumption flow on surface soil over the subgrid column covered with natural vegetation;
 
-The call is done before CalcAndWithdrawIrrigationFluxes() subroutine. The order is important, since irrigation has the least priority between sectors to satisfy water requirements.
+The call is done before `CalcAndWithdrawIrrigationFluxes()` subroutine. The order is important, since in our current implementation, the irrigation has the least priority between sectors to satisfy water requirements.
+
+In addition to the new subroutine related to human water use, we also changed one of the inputs of the subroutine related to irrigation (see [Irrigation in CTSM](Irrigation/irrig2013.md)).  In order to establish how much water can actually be provided for irrigation (upper limit), the `CalcIrrigationNeeded()` subroutine will receive as input the variable `volr` corresponding to the volume of water in the entire river network in the coresponding gridcell (measured in m3).  But because human water abstractions for the sectors other than irrigation result in a total negative balance in terms of river volume (because withdrawal is always higher than return flow), then the `volr` quantity received by the irrigation subroutine need to be updated at the level of the driving sequence as `volr - this_day_total_sectoral_withdrawal + this_day_total_sectoral_return_flow`. This way, on a given day, the irrigation will not consume more water, than actually available after all other sectors were satisfied. 
 
 
-## Things which may require change:
-### Accounting for sectoral priority when limited water resources
-Calling `CalcAndWithdrawSectorWaterFluxes()` before `CalcAndWithdrawIrrigationFluxes()` is done because if water is limited we would like to have the following priority for water usage: domestic (highest), livestock, thermoelectric, manufacturing, mining, irrigation (lowest). But at the moment this is not really done, as I don't update the `volr` (avaialable river water) after withdrawing for the sectors. I think one way to do this is to maybe change the input of `irrigation_inst%CalcIrrigationNeeded()` with instead of giving the `volr`, provide `volr - [total actual withdrawal - total actual return flow]`, where `total actual withdrawal / return flow` is the sum of the contributions of the 5 sectors (domestic, livestock, thermoelectric, manufacturing and mining). We can think of other solution too, but in general something in this spirit.
+## Possible improvements:
 
-### How to deal with consumpted water?
-Also at the moment, we don't do anything about the consumed water. But the plan is to add it to the surface soil layer over natural vegetation and pervious roads columns. The choice of columns over which we will add the consumed water may change, but in any case we should avoid to place this water on the irrigated land (to not interfere with irrigation process).
+At the moment, for all the sectors except irrigation, water is supplied only from the surface water (rivers).
 
-The application of consumed water should be distributed proportionally (for example if in one grid there is x=20% of pervious roads, and y=25% of natural vegetation, and other land is something else, then all consumed water should be distribute proportionally between x and y. Since y/x=1.25, the pervious roads will receive 100/(1+1.25) => 44.45% of consumption and the natural vegetation the 55.55% remaining.
-
-### Usage of groundwater as a source for sectoral fluxes
-At the moment, water is taken only from the surface water (rivers).
-The CTSM model already supports water withdrawal from unconfined groundwater (already available for the irrigation). Therefore one of the things we intend to add is partially satisfy sectoral demand from groundwater.
+At the same time, CTSM already supports water withdrawal from unconfined groundwater (only for irrigation). Therefore one of the things we intend to add is the possibility partially satisfy all sectoral demand from groundwater.
 
 The way this is done at the moment in CTSM:
 1. We satisfy as much as possible from surface water.
-2. We satisfy the rest from unconfined groundwater (if not enough take as much as available)
+2. We satisfy the rest from unconfined groundwater
 
-This strategy do not seem optimal, since it may underestimate groundwater withdrawal for regions havily relying on  this source. So in the future we may wish to change this.
+This strategy do not seem optimal, since it may underestimate groundwater withdrawal for regions havily relying on this source. So in the future we may think of new ways to improve groundwater abstraction algorithm, but also add support for groundwater usage for all sectors.
 
 
 
