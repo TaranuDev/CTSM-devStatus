@@ -6,8 +6,11 @@ tags:
 enableToc: false # do not show a table of contents on this page
 ---
 
-## Overview:
-This new module is largely inspired from existing module `src/biogeophys/IrrigationMod.F90`.
+## General discussion:
+This is a new module developed to support the sectoral water abstractions. During the development, the code for this module was largely inspired from a similar existing module for irrigation (`src/biogeophys/IrrigationMod.F90`). 
+
+
+
 
 ## Code:
 ```fortran

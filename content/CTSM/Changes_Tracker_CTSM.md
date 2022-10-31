@@ -24,7 +24,6 @@ The GitHub fork can be accessed [here](https://github.com/TaranuDev/CTSM)
 - [CTSM/src/main/clm_driver.F90](CTSM/clm_driver.md)
 - [CTSM/src/main/restFileMod.F90](CTSM/restFileMod.md)
 - [CTSM/src/main/controlMod.F90](CTSM/controlMod.md)
-- [CTSM/src/main/clm_varpar.F90](CTSM/clm_varpar.md)
 - [CTSM/src/main/clm_instMod.F90](CTSM/clm_instMod.md)
 - [CTSM/src/main/clm_varctl.F90](CTSM/clm_varctl.md)
 
