@@ -31,6 +31,7 @@ For other sectors, instead of deriving the sectoral demand and consumption from 
 Finally, a basic sectoral priority algorithm is implemented, with water supplied by order of priority from domestic to irrigation. This way, in situations when water is scarce, sectors will compete for limited resources. The current algorithm may be improved in the future, to allow different strategies of water management under limited resource availability.
 
 ![Figure 1: Infographic showcasing the representation of human water use in CESM.](Figures/model_features.PNG)
+
 **Figure 1:** A schematic depiction of the human water abstractions in Community Earth System Model (CESM)
 
 ## Validation:
