@@ -6,6 +6,6 @@ tags:
 enableToc: false # do not show a table of contents on this page
 ---
 ## Overview:
-Here we add the `clm_inparm` namelist group the logical entry `sectorwater`.
+Here we add the logical entry `sectorwater` to the `clm_inparm` namelist group.
 
-Also we `mpi_bcast` the `sectorwater` value to all the processes of the group.
+We also `mpi_bcast` the `sectorwater` variable, so that its value can be accessed from anywhere. 
