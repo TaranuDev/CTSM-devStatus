@@ -32,7 +32,7 @@ The GitHub fork can be accessed [here](https://github.com/TaranuDev/CTSM)
 - [CTSM/src/biogeophys/SectorWaterMod.F90](CTSM/SectorWaterMod.md) `new module`
 - [CTSM/src/biogeophys/HydrologyNoDrainageMod.F90](CTSM/HydrologyNoDrainageMod.md)
 - [CTSM/src/biogeophys/BalanceCheckMod.F90](CTSM/BalanceCheckMod.md)
-- [CTSM/src/biogeophys/Waterlnd2atmType.F90](CTSM/Waterlnd2atmType.F90)
-- [CTSM/src/biogeophys/CanopyHydrologyMod.F90](CTSM/CanopyHydrologyMod.F90)
-- [CTSM/src/biogeophys/WaterFluxType.F90](CTSM/WaterFluxType.F90)
+- [CTSM/src/biogeophys/Waterlnd2atmType.F90](CTSM/Waterlnd2atmType.md)
+- [CTSM/src/biogeophys/CanopyHydrologyMod.F90](CanopyHydrologyMod.md)
+- [CTSM/src/biogeophys/WaterFluxType.F90](CTSM/WaterFluxType.md)
 
